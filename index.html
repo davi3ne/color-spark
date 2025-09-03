@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Color Spark - Gerador de Paleta de Cores Instantâneo</title>
-    <meta name="description" content="Gere paletas de cores harmoniosas instantaneamente com o Color Spark. A ferramenta perfeita para designers, desenvolvedores e criadores de conteúdo.">
+    <title>Color Spark - Gerador de Paletas por Moods e Emoções</title>
+    <meta name="description" content="Gere, nomeie, salve e exporte paletas de cores perfeitas para seus projetos. Escolha por moods, ajuste o número de cores e copie como variáveis CSS com um clique.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,18 +17,44 @@
 
     <header class="site-header">
         <div class="header-content">
-            <h1>Color Spark</h1>
-            <button id="generate-btn">Gerar Paleta</button>
-        </div>
-        </header>
+            <div class="header-left">
+                <h1>Color Spark</h1>
+            </div>
+            
+            <div class="header-center" id="mood-buttons-container">
+                </div>
 
-    <main id="color-palette-container">
-        </main>
+            <div class="header-right">
+                <span class="separator"></span>
+                <button id="generate-btn" class="main-btn primary-btn">Gerar Paleta</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="color-palette-container"></main>
+
+    <section id="saved-palettes-section">
+        <div class="saved-palettes-header">
+            <h2>Minhas Paletas Salvas</h2>
+            <div class="save-controls">
+                <input type="text" id="palette-name-input" placeholder="Nomeie sua paleta..." maxlength="50">
+                <button id="save-palette-btn" class="main-btn secondary-btn">Salvar Paleta</button>
+            </div>
+        </div>
+        <div id="saved-palettes-list">
+            </div>
+    </section>
 
     <footer class="site-footer">
         <div class="footer-content">
-            <p>Pressione a barra de espaço para gerar novas paletas.</p>
+            <div class="footer-info">
+                <p>Pressione a barra de espaço para gerar novas paletas.</p>
             </div>
+            <div class="footer-actions">
+                <button id="export-css-btn" class="main-btn success-btn">Exportar como CSS</button>
+                <button id="export-svg-btn" class="main-btn info-btn">Exportar como SVG</button>
+            </div>
+        </div>
     </footer>
 
     <div id="copy-notification">Copiado!</div>
