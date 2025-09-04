@@ -47,13 +47,23 @@
 
     <main id="color-palette-container"></main>
 
-    <section id="saved-palettes-section">
-        <div class="saved-palettes-header">
-            <h2>Minhas Paletas Salvas</h2>
+    <section id="actions-section">
+        <div class="actions-wrapper">
             <div class="save-controls">
                 <input type="text" id="palette-name-input" placeholder="Nomeie sua paleta..." maxlength="50">
                 <button id="save-palette-btn" class="main-btn secondary-btn">Salvar Paleta</button>
             </div>
+            <div class="export-controls">
+                <button id="export-css-btn" class="main-btn success-btn">Exportar como CSS</button>
+                <button id="export-svg-btn" class="main-btn info-btn">Exportar como SVG</button>
+                <button id="export-png-btn" class="main-btn warning-btn">Exportar como PNG</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="saved-palettes-section">
+        <div class="saved-palettes-header">
+            <h2>Minhas Paletas Salvas</h2>
         </div>
         <div id="saved-palettes-list"></div>
     </section>
@@ -83,11 +93,6 @@
         <div class="footer-content">
             <div class="footer-info">
                 <p>Pressione a barra de espaço para gerar novas paletas.</p>
-            </div>
-            <div class="footer-actions">
-                <button id="export-css-btn" class="main-btn success-btn">Exportar como CSS</button>
-                <button id="export-svg-btn" class="main-btn info-btn">Exportar como SVG</button>
-                <button id="export-png-btn" class="main-btn warning-btn">Exportar como PNG</button>
             </div>
         </div>
     </footer>
